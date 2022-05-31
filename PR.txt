@@ -1,0 +1,31 @@
+Exercício 1
+
+1. De início foram criados dois ficheiros json, um primeiro contendo a informação sobre as cidades contidas no dataset disponibilizado e o segundo com informação sobre as ligações entre as mesmas.
+
+2. Seguidamente de forma a criar bases de dados para cada um dos ficheiros criados foram usados:
+mongoimport -d MAPA2022 -c cidades cidades.json --jsonArray
+mongoimport -d MAPA2022 -c ligacoes ligacoes.json --jsonArray
+Resultando na criação da base de dados MAPA2022 e nas coleções cidades e ligacoes contendo as respetivas informações dos ficheiros criados.
+
+3. Usando o comando
+npx express-generator --view=pug Ex1
+E os comandos, aplicados à nova diretoria Ex1
+npm install
+npm i mongoose nodemon --save
+De forma a ser possível desenvolver um servidor em nodejs responsável por dar support à api.
+Para correr o servidor, na pasta Ex1 realiza-se nem start e este fica a correr em nodemon na porta 3000.
+
+
+Exercício 2
+1. Primeiramente recorrendo ao POSTMAN foi feito um pedido de post para http://clav-api.di.uminho.pt/v2/users/login com o body 
+{
+    "username": "rpcw2022@gmail.com",
+    "password": "2022"
+}
+De forma a obter a apikey que posteriormente foi guardada numa variável no ficheiro index.js da pasta routes.
+
+2. De seguida foram respondidas as alíneas de aquecimento, cuja resposta se encontra na pasta Ex2, com o nome aquecimento.txt.
+
+3. Finamente correram-se os comandos npx express-generator --view=pug Ex2, npm install e npm i axios nodemon --save de forma a puder desenvolver a aplicação pedida.
+
+4. De forma a corrê-la, corre-se o comando npm start na pasta ex2, onde a aplicação vai correr em nodemon na porta 3000.
